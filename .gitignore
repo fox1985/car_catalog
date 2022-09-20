@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+copy/
+*db.sqlite3
+*.pyc
+emailsettings.py
+db.json
+venv/
+media/
