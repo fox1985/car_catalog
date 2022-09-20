@@ -116,8 +116,8 @@
         <!-- Main title -->
         <div class="main-title">
             {% include 'includes/messages.html' %}
-            <h1>Featured <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Рекомендуемые  <span>автомобили</span></h1>
+
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
@@ -216,8 +216,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Latest <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Самый последний <span>Машины</span></h1>
         </div>
         <div class="row">
              {% for car in all_cars %}
@@ -227,7 +226,7 @@
 
                     <div class="car-thumbnail">
                         <a href="{% url 'car_detail' car.id %}" class="car-img">
-                            <div class="tag">For Sale</div>
+
                             <img class="d-block w-100" src="{{ car.car_photo.url }}" alt="car" style="min-height:262px; max-height: 262px;">
 
                             <div class="facilities-list clearfix">
@@ -315,8 +314,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Executive <span>Team</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <h1>Наша <span>команда</span></h1>
+
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
