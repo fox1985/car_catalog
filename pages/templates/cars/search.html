@@ -9,9 +9,9 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Search Results</h1>
+            <h1>Результаты поиска</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}">На галвную страницу</a></li>
                 <li class="active">Поиск</li>
             </ul>
         </div>
@@ -98,7 +98,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <button class="btn btn-block button-theme btn-md">
-                                    <i class="fa fa-search"></i>Find
+                                    <i class="fa fa-search"></i>Найди
                                 </button>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Here's your <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Вот ваши  <span>машины</span></h1>
+
         </div>
 
         <div class="row">
@@ -126,7 +126,7 @@
                 <div class="car-box">
                     <div class="car-thumbnail">
                         <a href="{% url 'car_detail' car.id %}" class="car-img">
-                            <div class="tag">For Sale</div>
+
                             <img class="d-block w-100" src="{{ car.car_photo.url }}" alt="car" style="min-height: 262px; max-height: 262px;">
                             <div class="facilities-list clearfix">
                                 <ul>
