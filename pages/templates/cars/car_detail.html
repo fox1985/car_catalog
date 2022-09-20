@@ -240,7 +240,7 @@
                                  <input type="hidden" name="car_id" value="{{ single_car.id }}">
 
                                 <div class="form-group">
-                                  <label for="name" class="col-form-label">Hello, My Name is</label>
+                                  <label for="name" class="col-form-label">Привет, Меня зовут</label>
                                   <div class="row">
                                     <div class="col">
                                       <input type="text" name="first_name" class="form-control" placeholder="First Name" {% if user.is_authenticated %} value="{{ user.first_name }}" {% endif %} required>
@@ -264,13 +264,13 @@
                                 </div>
 
                                 <div class="form-group">
-                                  <label for="name" class="col-form-label">I live in</label>
+                                  <label for="name" class="col-form-label">Я живу </label>
                                   <div class="row">
                                     <div class="col">
-                                      <input type="text" name="city" class="form-control" placeholder="City" required>
+                                      <input type="text" name="city" class="form-control" placeholder="Город" required>
                                     </div>
                                     <div class="col">
-                                      <input type="text" name="state" class="form-control" placeholder="State" required>
+                                      <input type="text" name="state" class="form-control" placeholder="Страна" required>
                                     </div>
                                   </div>
                                 </div>
@@ -278,22 +278,22 @@
                                 <div class="form-group">
                                   <div class="row">
                                     <div class="col">
-                                        <label for="name" class="col-form-label">You can reach me by email at</label>
+                                        <label for="name" class="col-form-label">Адрес Email</label>
                                       <input type="email" name="email" class="form-control" placeholder="Email Address" {% if user.is_authenticated %} value="{{ user.email }}" {% endif %} required>
                                     </div>
                                     <div class="col">
-                                        <label for="phone" class="col-form-label">or by phone at</label>
-                                      <input type="text" name="phone" placeholder="Phone Number (optional)" class="form-control">
+                                        <label for="phone" class="col-form-label">Номер телефона</label>
+                                      <input type="text" name="phone" placeholder="(необязательно)" class="form-control">
                                     </div>
                                   </div>
                                 </div>
 
                                 <div class="form-group">
-                                  <label for="message" class="col-form-label">Add comments</label>
-                                  <textarea name="message" class="form-control" placeholder="Enter your message here (optional)"></textarea>
+                                  <label for="message" class="col-form-label">Добавить комментарии</label>
+                                  <textarea name="message" class="form-control" placeholder="Введите свое сообщение здесь"></textarea>
                                 </div>
                                 <hr>
-                                <input type="submit" value="Send" class="btn btn-block btn-danger">
+                                <input type="submit" value="Отправить" class="btn btn-block btn-danger">
                             </form>
                           </div>
                         </div>
@@ -301,7 +301,7 @@
                     </div>
                     <!-- Question start -->
                     <div class="widget question">
-                        <h5 class="sidebar-title">ЕКонтактная информация</h5>
+                        <h5 class="sidebar-title">Контактная информация</h5>
                         <ul class="contact-info">
                             <li>
                                 <i class="flaticon-pin"></i>{{ single_car.city }}, {{ single_car.state }}
