@@ -2,9 +2,36 @@ from datetime import datetime
 from ckeditor.fields import RichTextField
 from django.db import models
 
+# features_choices = (
+#     ('Круиз-контроль', 'Круиз-контроль'),
+#     ('Аудио интерфейс', 'Аудио интерфейс'),
+#     ('Подушки безопасности', 'Подушки безопасности'),
+#     ('Кондиционер', 'Кондиционер'),
+#     ('Подогрев сидений', 'Подогрев сидений'),
+#     ('Аварийная система', 'Аварийная система'),
+#     ('Парковщик', 'Парковщик'),
+#     ('Усилитель рулевого управления', 'Усилитель рулевого управления'),
+#     ('Камера заднего вида', 'Камера заднего вида'),
+#     ('Непосредственный Впрыск Топлива', 'Непосредственный Впрыск Топлива'),
+#     ('Автоматический Запуск Остановка', 'Автоматический Запуск Остановка'),
+#     ('Ветроотражатель', 'Ветроотражатель'),
+#     ('Телефонная трубка Bluetooth', 'Телефонная трубка Bluetooth'),
+# )
+
 
 
 # Create your models here.
+
+
+class Features(models.Model):
+    title = models.CharField(max_length=100, verbose_name='особенности')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Особиность'
+        verbose_name_plural = 'Особиности'
 
 
 
@@ -66,21 +93,7 @@ class Car(models.Model):
     for r in range(2000, (datetime.now().year+1)):
         year_choice.append((r, r))
 
-    features_choices = (
-        ('Круиз-контроль', 'Круиз-контроль'),
-        ('Аудио интерфейс', 'Аудио интерфейс'),
-        ('Подушки безопасности', 'Подушки безопасности'),
-        ('Кондиционер', 'Кондиционер'),
-        ('Подогрев сидений', 'Подогрев сидений'),
-        ('Аварийная система', 'Аварийная система'),
-        ('Парковщик', 'Парковщик'),
-        ('Усилитель рулевого управления', 'Усилитель рулевого управления'),
-        ('Камера заднего вида', 'Камера заднего вида'),
-        ('Непосредственный Впрыск Топлива', 'Непосредственный Впрыск Топлива'),
-        ('Автоматический Запуск Остановка', 'Автоматический Запуск Остановка'),
-        ('Ветроотражатель', 'Ветроотражатель'),
-        ('Телефонная трубка Bluetooth', 'Телефонная трубка Bluetooth'),
-    )
+
 
     door_choices = (
         ('2', '2'),
@@ -105,7 +118,7 @@ class Car(models.Model):
     car_photo_2 = models.ImageField(upload_to='car_photos/%Y/%m/%d/', blank=True, verbose_name='Фото авто')
     car_photo_3 = models.ImageField(upload_to='car_photos/%Y/%m/%d/', blank=True, verbose_name='Фото авто')
     car_photo_4 = models.ImageField(upload_to='car_photos/%Y/%m/%d/', blank=True, verbose_name='Фото авто')
-    features = models.CharField(choices=features_choices, max_length=100, verbose_name='особенности')
+    features = models.ManyToManyField(Features, verbose_name='особенности')
     body_style = models.CharField(max_length=100, verbose_name='Тип автомабиля')
     engine = models.CharField(max_length=100, verbose_name='двигатель')
     transmission = models.CharField(max_length=100, verbose_name='коробка передач')

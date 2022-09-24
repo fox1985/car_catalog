@@ -7,3 +7,4 @@ emailsettings.py
 db.json
 venv/
 media/
+0001_initial.py
